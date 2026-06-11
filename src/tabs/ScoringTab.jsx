@@ -17,7 +17,7 @@ export default function ScoringTab({ targets, updateTarget }) {
 
   return (
     <div>
-      <SectionHead no="07" title="Deal Scoring" sub="Weighted screen from the playbook criteria · ranked" />
+      <SectionHead no="08" title="Deal Scoring" sub="Weighted screen from the playbook criteria · ranked" />
       {targets.length === 0 ? (
         <Card style={{ textAlign: "center", padding: 32 }}>
           <SpecLabel>No targets to score — add platform candidates in the Pipeline tab first</SpecLabel>

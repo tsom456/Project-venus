@@ -18,7 +18,7 @@ export default function ValuationTab() {
 
   return (
     <div>
-      <SectionHead no="05" title="Valuation Calculator" sub="Quality factors position you inside the subsector band" />
+      <SectionHead no="06" title="Valuation Calculator" sub="Quality factors position you inside the subsector band" />
 
       <Card style={{ marginBottom: 16, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <SpecLabel color={C.orange}>Inputs</SpecLabel>

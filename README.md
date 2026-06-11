@@ -15,6 +15,7 @@ npm run build    # production build to dist/
 | Tab | What it does |
 | --- | --- |
 | **Overview** | Market stats and the trends moving LMM industrials deal flow |
+| **News** | Live headlines (Google News RSS via CORS proxy, with fallback) and curated links to live industry sources |
 | **Multiples** | Indicative EV/EBITDA bands by subsector on a machined 3x–11x scale |
 | **Public Comps** | Watchlist of public industrials peers; enter current trading multiples (persisted) |
 | **Valuation** | Calculator: pick a subsector, assess quality factors, get an implied multiple and EV inside the band |

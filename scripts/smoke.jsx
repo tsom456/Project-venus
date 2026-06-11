@@ -3,6 +3,7 @@
 import { renderToString } from "react-dom/server";
 import React from "react";
 import OverviewTab from "../src/tabs/OverviewTab.jsx";
+import NewsTab from "../src/tabs/NewsTab.jsx";
 import MultiplesTab from "../src/tabs/MultiplesTab.jsx";
 import CompsTab from "../src/tabs/CompsTab.jsx";
 import ValuationTab from "../src/tabs/ValuationTab.jsx";
@@ -60,6 +61,7 @@ assert(csv.includes("Acme Precision Machining"), "csv missing target");
 const noop = () => {};
 const tabs = {
   Overview: <OverviewTab />,
+  News: <NewsTab />,
   Multiples: <MultiplesTab />,
   Comps: <CompsTab comps={{ PH: "15.2" }} setComps={noop} saveState={{ save: noop, msg: "" }} />,
   Valuation: <ValuationTab />,
@@ -74,6 +76,7 @@ for (const [name, el] of Object.entries(tabs)) {
 }
 const scoringHtml = renderToString(tabs.Scoring).replace(/<!--.*?-->/g, "");
 assert(scoringHtml.includes("C · 50"), "scoring grade chip missing from markup");
+assert(renderToString(tabs.News).includes("Manufacturing Dive"), "news source links missing from markup");
 assert(renderToString(tabs.AddOns).includes("Blended entry multiple"), "blend stats missing from markup");
 
 console.log("smoke OK — all tabs render, scoring/blend/csv math checks pass");

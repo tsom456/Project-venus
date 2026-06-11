@@ -5,7 +5,7 @@ import { SpecLabel, SectionHead, Card } from "../components/ui.jsx";
 export default function PlaybookTab() {
   return (
     <div>
-      <SectionHead no="09" title="Sourcing Playbook" sub="Data, channels, screening" />
+      <SectionHead no="10" title="Sourcing Playbook" sub="Data, channels, screening" />
       <div style={{ display: "grid", gap: 16 }}>
         {PLAYBOOK.map((sec) => (
           <Card key={sec.head}>

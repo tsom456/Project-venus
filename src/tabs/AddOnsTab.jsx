@@ -69,7 +69,7 @@ export default function AddOnsTab({ targets, addons, setAddons, persist }) {
   if (platforms.length === 0) {
     return (
       <div>
-        <SectionHead no="08" title="Add-On Tracker" sub="Buy-and-build arbitrage per platform" />
+        <SectionHead no="09" title="Add-On Tracker" sub="Buy-and-build arbitrage per platform" />
         <Card style={{ textAlign: "center", padding: 32 }}>
           <SpecLabel>No active platforms — add platform candidates in the Pipeline tab first</SpecLabel>
         </Card>
@@ -79,7 +79,7 @@ export default function AddOnsTab({ targets, addons, setAddons, persist }) {
 
   return (
     <div>
-      <SectionHead no="08" title="Add-On Tracker" sub="Buy-and-build arbitrage per platform" />
+      <SectionHead no="09" title="Add-On Tracker" sub="Buy-and-build arbitrage per platform" />
 
       <Card style={{ marginBottom: 16, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <SpecLabel color={C.orange}>Platform</SpecLabel>

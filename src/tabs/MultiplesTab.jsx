@@ -5,7 +5,7 @@ import { SpecLabel, SectionHead, Card, RangeBar } from "../components/ui.jsx";
 export default function MultiplesTab() {
   return (
     <div>
-      <SectionHead no="03" title="EV/EBITDA by Subsector" sub="LMM private deals · $2–25M EBITDA · indicative bands" />
+      <SectionHead no="04" title="EV/EBITDA by Subsector" sub="LMM private deals · $2–25M EBITDA · indicative bands" />
       <Card style={{ padding: 0 }}>
         <div style={{ display: "flex", padding: "10px 16px", borderBottom: `1px solid ${C.line}`, gap: 12 }}>
           <SpecLabel>Subsector</SpecLabel>

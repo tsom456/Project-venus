@@ -91,7 +91,7 @@ export default function PipelineTab({ targets, setTargets, persist, addons }) {
 
   return (
     <div>
-      <SectionHead no="06" title="Platform Target Pipeline" sub="Persists across sessions" />
+      <SectionHead no="07" title="Platform Target Pipeline" sub="Persists across sessions" />
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12, marginBottom: 20 }}>
         <Card><SpecLabel>Active targets</SpecLabel><div style={pipeStat}>{totals.active}</div></Card>

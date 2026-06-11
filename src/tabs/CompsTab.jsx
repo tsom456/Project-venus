@@ -8,7 +8,7 @@ export default function CompsTab({ comps, setComps, saveState }) {
   };
   return (
     <div>
-      <SectionHead no="04" title="Public Comps Watchlist" sub="Trading multiples move daily — enter current figures" />
+      <SectionHead no="05" title="Public Comps Watchlist" sub="Trading multiples move daily — enter current figures" />
       <Card style={{ padding: 0, overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
           <thead>

@@ -3,6 +3,7 @@ import { C, F } from "./theme.js";
 import { loadKey, saveKey } from "./lib/storage.js";
 import { SpecLabel } from "./components/ui.jsx";
 import OverviewTab from "./tabs/OverviewTab.jsx";
+import NewsTab from "./tabs/NewsTab.jsx";
 import MultiplesTab from "./tabs/MultiplesTab.jsx";
 import CompsTab from "./tabs/CompsTab.jsx";
 import ValuationTab from "./tabs/ValuationTab.jsx";
@@ -11,7 +12,7 @@ import ScoringTab from "./tabs/ScoringTab.jsx";
 import AddOnsTab from "./tabs/AddOnsTab.jsx";
 import PlaybookTab from "./tabs/PlaybookTab.jsx";
 
-const TABS = ["Overview", "Multiples", "Public Comps", "Valuation", "Pipeline", "Scoring", "Add-Ons", "Playbook"];
+const TABS = ["Overview", "News", "Multiples", "Public Comps", "Valuation", "Pipeline", "Scoring", "Add-Ons", "Playbook"];
 
 export default function SourcingHub() {
   const [tab, setTab] = useState("Overview");
@@ -96,6 +97,7 @@ export default function SourcingHub() {
         ) : (
           <>
             {tab === "Overview" && <OverviewTab />}
+            {tab === "News" && <NewsTab />}
             {tab === "Multiples" && <MultiplesTab />}
             {tab === "Public Comps" && (
               <CompsTab comps={comps} setComps={setComps} saveState={{ save: saveComps, msg: compsMsg }} />
