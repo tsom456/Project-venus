@@ -29,6 +29,20 @@ Six criteria from the playbook screen, weighted to 100 (`src/lib/scoring.js`). E
 
 The Valuation tab maps the same quality score linearly across the chosen subsector band: `multiple = lo + quality × (hi − lo)`.
 
+## Deployment
+
+Pushes to `main` (or the current working branch) build, smoke-test, and deploy to GitHub Pages via `.github/workflows/deploy.yml`. One-time setup: in **Settings → Pages**, set **Source** to **GitHub Actions**. The site then lives at `https://tsom456.github.io/Project-venus/`.
+
+### Custom domain
+
+1. Buy a domain at any registrar (Cloudflare, Porkbun, and Namecheap are cheap and no-nonsense).
+2. In **Settings → Pages → Custom domain**, enter the domain and save. GitHub provisions the TLS certificate automatically; tick **Enforce HTTPS** once it does.
+3. At the registrar, add DNS records:
+   - Apex domain (`example.com`): four `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `www` (or any subdomain): `CNAME` → `tsom456.github.io`
+
+The build already uses relative asset paths (`base: "./"` in `vite.config.js`), so it works unchanged at the Pages subpath or a custom domain root.
+
 ## Persistence
 
 State (pipeline targets, add-ons, comp multiples) is stored via `window.storage` when running as a Claude artifact, falling back to `localStorage` in the browser (`src/lib/storage.js`).
